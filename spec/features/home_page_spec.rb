@@ -16,6 +16,7 @@ RSpec.describe 'Home page' do
       visit '/'
 
       expect(page).to have_button('Register here')
+      expect(page).to have_button('Login')
     end
   end
 end
