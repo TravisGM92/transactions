@@ -1,4 +1,4 @@
-@media only screen and (max-width:600px){
+@media only screen and (min-width:600px){
 	@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 	.generic_class {
 		font-family: 'Orbitron';
@@ -33,7 +33,7 @@
 
 	#phone {
 	  width:70%;
-		margin-left: 65px;
+		margin-left: 80px;
 	}
 
 	#phone-caption {
@@ -44,7 +44,7 @@
 
 	#calculator-photo {
 	  width: 40%;
-	  margin-left: 115px;
+	  margin-left: 155px;
 	}
 
 	#calculator-caption {
@@ -55,7 +55,7 @@
 
 	#safe-photo {
 	  width: 70%;
-		margin-left: 55px;
+		margin-left: 75px;
 	}
 
 	#safe-caption {
