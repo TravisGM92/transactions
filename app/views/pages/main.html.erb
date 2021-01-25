@@ -22,10 +22,13 @@
        </div>
     </div>
 
+    <form class="register" action="/register" method="get">
+      <input type="submit" name="register-button" value="Register here">
+    </form>
 
-    <%= button_to "Register here", "/registration", :style => 'font-size: 20px;background-color:rgb(236, 116, 173);border-radius:5px;box-shadow: 0 0 10px #a9a9a9;', :id => "register-button", method: :get %>
-
-    <%= button_to "Login", "/login", :style => 'font-size: 20px;background-color:rgb(236, 116, 173);border-radius:5px;box-shadow: 0 0 10px #a9a9a9;', :id => "register-button", method: :get %>
+    <form class="login" action="/login" method="get">
+      <input type="submit" name="login-button" value="Login">
+    </form>
 
   </body>
 </html>
