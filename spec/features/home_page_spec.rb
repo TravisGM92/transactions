@@ -10,4 +10,13 @@ RSpec.describe 'Home page' do
     expect(page).to have_content('Upload transactions, receipts & more with your phone')
     expect(page).to have_content('Store it all, safely')
   end
+
+  describe 'register button' do
+    it 'allows a user to register' do
+      visit '/'
+
+      expect(page).to have_button('Register here')
+      expect(page).to have_button('Login')
+    end
+  end
 end
