@@ -18,4 +18,10 @@ RSpec.describe 'Login page' do
       expect(current_path).to eq('/dashboard')
     end
   end
+  describe 'if user logs in with bad credentials' do
+    it 'user is redirected to login page with error message' do
+      visit('/login')
+
+    end
+  end
 end
