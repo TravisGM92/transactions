@@ -86,4 +86,32 @@
 		margin-bottom: 100px;
 		border-radius: 6px;
 	}
+
+	body.register input[type=submit] {
+		float: right;
+		background-color: rgb(97, 162, 41);
+		width: 400px;
+		height: 130px;
+		font-size: 50px;
+		margin-top: 100px;
+		margin-right: 310px;
+		border-radius: 6px;
+	}
+
+	.register {
+		margin-left: 10%;
+	}
+
+	body.register #first_name, #last_name, #password, #email {
+		margin: 0 auto;
+		margin-top: 100px;
+		width: 500px;
+		height: 100px;
+		font-size: 60px;
+		text-align: center;
+	}
+
+	#back_home {
+		margin-bottom: 100px;
+	}
 }

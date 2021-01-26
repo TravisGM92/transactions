@@ -18,5 +18,11 @@ RSpec.describe 'Home page' do
       expect(page).to have_button('Register here')
       expect(page).to have_button('Login')
     end
+
+    it 'redirects to register page upon clicking' do
+      visit '/'
+      click_button('Register here')
+      expect(current_path).to eq('/register')
+    end
   end
 end
