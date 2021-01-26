@@ -26,3 +26,13 @@ RSpec.describe 'Home page' do
     end
   end
 end
+
+RSpec.describe 'Login/logout' do
+  describe 'when clicked on' do
+    it 'redirects to a login page' do
+      visit('/')
+      click_button('Login')
+      expect(current_path).to eq('/login')
+    end
+  end
+end
