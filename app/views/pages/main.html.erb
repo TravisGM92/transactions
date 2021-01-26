@@ -21,14 +21,15 @@
          <p id="safe-caption">Store it all, safely</p>
        </div>
     </div>
+    <% if current_user.nil? %>
+      <form class="register" action="/register" method="get">
+        <input type="submit" name="register-button" value="Register here">
+      </form>
 
-    <form class="register" action="/register" method="get">
-      <input type="submit" name="register-button" value="Register here">
-    </form>
-
-    <form class="login" action="/login" method="get">
-      <input type="submit" name="login-button" value="Login">
-    </form>
+      <form class="login" action="/login" method="get">
+        <input type="submit" name="login-button" value="Login">
+      </form>
+    <%end%>
 
   </body>
 </html>
