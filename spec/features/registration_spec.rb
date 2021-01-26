@@ -11,6 +11,7 @@ RSpec.describe 'Regsitration page' do
       expect(page).to have_field('email')
       expect(page).to have_field('password')
       expect(page).to have_button('Register')
+      expect(page).to have_button('Go back home')
     end
     it 'after filling the registration form and hitting submit, user is redirected to dashboard' do
       visit('/register')
