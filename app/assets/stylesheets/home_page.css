@@ -99,7 +99,7 @@
 	}
 
 	.register {
-		margin-left: 12%;
+		margin-left: 10%;
 	}
 
 	body.register #first_name, #last_name, #password, #email {
