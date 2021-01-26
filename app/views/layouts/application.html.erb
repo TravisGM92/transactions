@@ -10,9 +10,21 @@
   </head>
 
   <body>
-    <% flash.each do |type, message| %>
-      <p><%= message %></p>
-    <% end %>
-    <%= yield %>
+    <main>
+      <nav>
+        <% if current_user %>
+        <form class="logout" action="/" method="get">
+          <input type="submit" name="logout-button" value="Logout" id="logout">
+        </form>
+        <form class="back_home2" action="/" method="get">
+          <input type="submit" name="back_home" value="Home">
+        </form>
+        <% end %>
+      </nav>
+      <% flash.each do |type, message| %>
+        <p><%= message %></p>
+      <% end %>
+      <%= yield %>
+    </main>
   </body>
 </html>

@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+ .logout input[type=submit] {
+   float: left;
+   background-color: rgb(97, 162, 41);
+   width: 100px;
+   height: 50px;
+   font-size: 20px;
+   margin-left: 220px;
+   margin-top: 20px;
+   border-radius: 6px;
+ }
+
+ .back_home2 input[type=submit] {
+   float: left;
+   background-color: rgb(97, 162, 41);
+   width: 100px;
+   height: 50px;
+   font-size: 20px;
+   margin-left: 200px;
+   margin-top: 20px;
+   border-radius: 6px;
+ }
