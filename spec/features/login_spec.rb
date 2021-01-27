@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Login page' do
@@ -10,7 +12,7 @@ RSpec.describe 'Login page' do
     end
 
     it 'when filled and submitted, redirects user to dashboard page' do
-      user = User.create!({email: '1234@email.com', first_name: 'George', last_name: 'Canary', password: '1234'})
+      user = User.create!({ email: '1234@email.com', first_name: 'George', last_name: 'Canary', password: '1234' })
       visit('/login')
       fill_in :email, with: user.email
       fill_in :password, with: user.password
@@ -18,9 +20,12 @@ RSpec.describe 'Login page' do
       expect(current_path).to eq('/dashboard')
     end
   end
+end
+
+RSpec.describe 'Login page' do
   describe 'if user logs in with bad credentials' do
     it 'user is redirected to login page with error message' do
-      user = User.create!({email: '1234@email.com', first_name: 'George', last_name: 'Canary', password: '1234'})
+      user = User.create!({ email: '1234@email.com', first_name: 'George', last_name: 'Canary', password: '1234' })
       visit('/login')
 
       fill_in :email, with: user.email

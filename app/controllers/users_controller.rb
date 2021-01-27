@@ -9,7 +9,8 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to '/dashboard'
     else
-      render :new
+      flash[:notice] = 'Sorry, please try again'
+      redirect_to('/register')
     end
   end
 

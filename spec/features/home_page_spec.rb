@@ -37,7 +37,7 @@ RSpec.describe 'Login/logout' do
   end
 
   it 'when a user is already logged in, login button doesnt show' do
-    user = User.create!(first_name: "eDog", email: "elah@email.com", password: "password", last_name: 'Dudet')
+    user = User.create!(first_name: 'eDog', email: 'elah@email.com', password: 'password', last_name: 'Dudet')
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     visit('/')
     expect(page).to_not have_button('Register here')
@@ -45,7 +45,7 @@ RSpec.describe 'Login/logout' do
   end
 
   it 'when a user is already logged in, logout button shows' do
-    user = User.create!(first_name: "eDog", email: "elah@email.com", password: "password", last_name: 'Dudet')
+    user = User.create!(first_name: 'eDog', email: 'elah@email.com', password: 'password', last_name: 'Dudet')
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     visit('/')
     expect(page).to have_button('Logout')
