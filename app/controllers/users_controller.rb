@@ -9,12 +9,17 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to '/dashboard'
     else
-      render :new
+      flash[:notice] = 'Sorry, please try again'
+      redirect_to('/register')
     end
   end
 
   def show
-    @user = current_user
+    if current_user
+      @user = current_user
+    else
+      redirect_to('/')
+    end
   end
 
   private
