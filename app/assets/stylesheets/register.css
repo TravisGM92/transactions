@@ -1,0 +1,38 @@
+body.register input[type=submit] {
+  float: right;
+  background-color: rgb(97, 162, 41);
+  width: 400px;
+  height: 130px;
+  font-size: 50px;
+  margin-top: 100px;
+  margin-right: 310px;
+  border-radius: 6px;
+}
+
+.register {
+  margin-left: 5%;
+}
+
+body.register #first_name, #last_name, #password, #email {
+  margin-left: 80px;
+  margin-top: 100px;
+  width: 500px;
+  height: 100px;
+  font-size: 60px;
+  text-align: center;
+}
+
+#back_home {
+  margin-bottom: 100px;
+}
+
+.register input[type=submit] {
+  float: left;
+  background-color: rgb(97, 162, 41);
+  width: 400px;
+  height: 130px;
+  font-size: 50px;
+  margin-top: 80px;
+  margin-left: 20px;
+  border-radius: 6px;
+}
