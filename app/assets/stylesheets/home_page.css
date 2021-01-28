@@ -87,6 +87,17 @@
 		border-radius: 6px;
 	}
 
+	.dash input[type=submit] {
+		background-color: rgb(97, 162, 41);
+		width: 400px;
+		height: 130px;
+		font-size: 50px;
+		margin-top: 80px;
+		margin-left: 300px;
+		margin-bottom: 100px;
+		border-radius: 6px;
+	}
+
 	body.register input[type=submit] {
 		float: right;
 		background-color: rgb(97, 162, 41);

@@ -29,6 +29,10 @@
       <form class="login" action="/login" method="get">
         <input type="submit" name="login-button" value="Login">
       </form>
+    <%else%>
+    <form class="dash" action="/dashboard" method="get">
+      <input type="submit" name="dash-button" value="Dashboard">
+    </form>
     <%end%>
 
   </body>

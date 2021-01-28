@@ -53,5 +53,6 @@ RSpec.describe 'Login/logout' do
     visit('/dashboard')
     expect(page).to have_button('Logout')
     expect(page).to have_button('Home')
+    expect(page).to have_button('Dashboard')
   end
 end
