@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-class CustomerConversionService
+class PeopleConversionService
   require 'csv'
-  def self.make_customer(data)
+  def self.make_people(data)
     customers = []
     headers = CSV.read(data['file'].path, headers: true).headers
     customer = Struct.new('Customer', *headers.map { |attr| attr })

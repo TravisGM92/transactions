@@ -15,9 +15,24 @@
       <br><br>
       <h4 style="text-align:center;">After you upload, you can do things like caluclate the average cost per item, if your CSV has items and a cost associated with each item.</h4>
     </div>
-    <div class="not_saved">
-
-    </div>
+    <% if @file_data %>
+      <div class="headers">
+        <%@headers.each do |header| %>
+          <p><%=header%></p>
+        <%end%>
+      </div>
+      <div style="clear:both"></div>
+      <div class="table_body">
+        <%@file_data.each do |row| %>
+          <%row.each do |attr|%>
+          <div class="row" style="background-color:grey;">
+            <p><%=attr%></p>
+          <%end%>
+          </div>
+          <div style="clear:both"></div>
+        <%end%>
+      </div>
+    <%end%>
     <br><br>
     <div class=".file-save">
       <h2 style="text-align:center;">To upload a CSV file AND save it to the database (less secure), upload it here:</h2>

@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   post '/sessions', to: 'sessions#create'
 
-  post '/csv', to: 'csv#create'
+  post '/csv', to: 'users#show'
 end
