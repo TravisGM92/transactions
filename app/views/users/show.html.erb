@@ -28,11 +28,19 @@
           <%row.each do |attr|%>
         <%if index.odd? %>
           <div class="row" style="background-color: rgb(201, 180, 145);">
-            <p><%=attr%></p>
+            <%if !attr.include?('@') && (attr.include?('http') || attr.include?('www.') || attr.include?('.com') || attr.include?('.org')) %>
+              <p><a href="<%=attr%>" target="_blank"><%=attr%></a></p>
+            <%else%>
+              <p><%=attr%></p>
+            <%end%>
         <%else%>
             <div class="row" style="background-color: rgb(230, 200, 140);">
-              <p><%=attr%></p>
+              <%if !attr.include?('@') && (attr.include?('http') || attr.include?('www.') || attr.include?('.com') || attr.include?('.org')) %>
+                <p><a href="<%=attr%>" target="_blank"><%=attr%></a></p>
+              <%else%>
+                <p><%=attr%></p>
               <%end%>
+            <%end%>
           <%end%>
         </div>
           <div style="clear:both"></div>
