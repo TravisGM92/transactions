@@ -2,19 +2,19 @@ body.dashboard input[type=file] {
   float: left;
   background-color: rgb(175, 175, 175);
   border: solid black 2px;
-  width: 370px;
+  width: 380px;
   height: 180px;
   font-size: 60px;
   border-radius: 6px;
-  margin-left: 150px;
+  margin-left: 120px;
 }
 
 #upload {
   background-color: rgb(175, 175, 175);
   border: solid black 2px;
-  width: 370px;
+  width: 380px;
   height: 180px;
-  font-size: 60px;
+  font-size: 50px;
   border-radius: 6px;
   margin-left: 50px;
 }
