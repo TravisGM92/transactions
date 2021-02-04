@@ -15,12 +15,15 @@
       <br><br>
       <h4 style="text-align:center;">After you upload, you can do things like caluclate the average cost per item, if your CSV has items and a cost associated with each item.</h4>
     </div>
+    <div class="not_saved">
+
+    </div>
     <br><br>
     <div class=".file-save">
       <h2 style="text-align:center;">To upload a CSV file AND save it to the database (less secure), upload it here:</h2>
       <%= form_tag '/csv2', multipart: true do %>
       <%= file_field_tag :file %>
-      <%= submit_tag "Upload CSV file", :id => 'upload' %>
+      <%= submit_tag "Upload & Save CSV file", :id => 'upload' %>
       <% end %>
     </div>
 

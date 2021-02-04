@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'Dashboard page' do
@@ -9,5 +11,16 @@ describe 'Dashboard page' do
     visit('/dashboard')
     expect(page).to have_button('Logout')
     expect(page).to have_button('Upload CSV file')
+    expect(page).to have_button('Upload & Save CSV file')
+  end
+  it 'has a field showing all CSV files ever uploaded (if in saved area)' do
+    visit('/dashboard')
+    expect(page).to have_css('.not_saved')
+  end
+  it 'can successfully upload CSV file and not save it, but display it' do
+    visit('/dashboard')
+    within('.not_saved') do
+      expect(page).to have_css('.file_1')
+    end
   end
 end
