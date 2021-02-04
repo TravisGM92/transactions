@@ -2,9 +2,9 @@ body.dashboard input[type=file] {
   float: left;
   background-color: rgb(175, 175, 175);
   border: solid black 2px;
-  width: 300px;
-  height: 100px;
-  font-size: 100px;
+  width: 500px;
+  height: 200px;
+  font-size: 80px;
   border-radius: 6px;
   margin-left: 170px;
 }
@@ -12,9 +12,9 @@ body.dashboard input[type=file] {
 #upload {
   background-color: rgb(175, 175, 175);
   border: solid black 2px;
-  width: 300px;
-  height: 100px;
-  font-size: 100px;
+  width: 500px;
+  height: 200px;
+  font-size: 80px;
   border-radius: 6px;
   margin-left: 50px;
 }
