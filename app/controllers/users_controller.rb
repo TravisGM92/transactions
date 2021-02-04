@@ -17,8 +17,8 @@ class UsersController < ApplicationController
   def show
     if current_user
       @user = current_user
-      @file_data = create_file
-      @headers = CSV.read(params['file'].path, headers: true).headers
+      @file_data = create_file if params['file']
+      @headers = CSV.read(params['file'].path, headers: true).headers if params['file']
     else
       redirect_to('/')
     end
