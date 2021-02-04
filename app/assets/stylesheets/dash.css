@@ -2,7 +2,7 @@ body.dashboard input[type=file] {
   float: left;
   background-color: rgb(175, 175, 175);
   border: solid black 2px;
-  width: 270px;
+  width: 200px;
   height: 80px;
   font-size: 20px;
   border-radius: 6px;
@@ -30,11 +30,18 @@ body.dashboard input[type=file] {
   float: left;
 }
 
+.row p:hover {
+  background-color: white;
+}
+
+
 .table_body p {
   margin-left: 15px;
 }
 
 .table_body {
+  border: solid 1px;
+  border-radius: 1px;
   height: 200px;
   width: 99.8%;
   overflow-y: scroll;

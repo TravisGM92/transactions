@@ -22,18 +22,26 @@
         <%end%>
       </div>
       <div style="clear:both"></div>
+
       <div class="table_body">
-        <%@file_data.each do |row| %>
+        <%@file_data.each_with_index do |row, index| %>
           <%row.each do |attr|%>
-          <div class="row" style="background-color:grey;">
+        <%if index.odd? %>
+          <div class="row" style="background-color: rgb(201, 180, 145);">
             <p><%=attr%></p>
+        <%else%>
+            <div class="row" style="background-color: rgb(230, 200, 140);">
+              <p><%=attr%></p>
+              <%end%>
           <%end%>
-          </div>
+        </div>
           <div style="clear:both"></div>
         <%end%>
-      </div>
     <%end%>
+  </div>
+
     <br><br>
+
     <div class=".file-save">
       <h2 style="text-align:center;">To upload a CSV file AND save it to the database (less secure), upload it here:</h2>
       <%= form_tag '/csv2', multipart: true do %>
