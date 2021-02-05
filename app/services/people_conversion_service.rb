@@ -9,6 +9,6 @@ class PeopleConversionService
     CSV.read(data['file'].path)[1..-1].each do |person|
       customers << customer.new(*person.map { |attr| attr })
     end
-    customers
+    {customers: customers, count: customers.length}
   end
 end

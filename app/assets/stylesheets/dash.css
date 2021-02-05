@@ -10,11 +10,11 @@ body.dashboard input[type=file] {
 }
 
 body.dashboard h2 {
-  font-size: 70px;
+  font-size: 50px;
 }
 
 body.dashboard h3 {
-  font-size: 50px;
+  font-size: 30px;
 }
 
 #upload {
@@ -29,22 +29,16 @@ body.dashboard h3 {
 
 .headers p {
   float: left;
-  margin-left: 25px;
+  margin-left: 20px;
   font-size: 20px;
+  font-weight: bold;
 }
 
 
-.row p {
-  float: left;
-}
-
-.row p:hover {
+.table_body p:hover {
   background-color: white;
-}
-
-
-.table_body p {
-  margin-left: 13px;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 .table_body {
@@ -52,6 +46,8 @@ body.dashboard h3 {
   border-radius: 1px;
   height: 400px;
   width: 99.8%;
-  overflow-y: scroll;
-  overflow-x: scroll;
+  overflow-y: auto;
+  overflow-x: auto;
+  margin-bottom: 100px;
+  position: relative;
 }
