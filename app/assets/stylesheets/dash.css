@@ -9,8 +9,12 @@ body.dashboard input[type=file] {
   margin-left: 100px;
 }
 
-body.dashboard input[type=file] p {
-  
+body.dashboard h2 {
+  font-size: 70px;
+}
+
+body.dashboard h3 {
+  font-size: 50px;
 }
 
 #upload {

@@ -6,10 +6,10 @@
   </head>
   <body class="dashboard">
     <br><br>
-    <div class=".file-no-save">
+    <div class="file-no-save">
       <h2 style="text-align:center;">To upload a CSV file without saving it, upload it here:</h2>
       <%= form_tag '/csv', multipart: true do %>
-      <p><%= file_field_tag :file %><p>
+      <%= file_field_tag :file %>
       <%= submit_tag "Upload CSV file", :id => 'upload' %>
       <% end %>
       <br><br>
@@ -53,7 +53,7 @@
     <div class=".file-save">
       <h2 style="text-align:center;">To upload a CSV file AND save it to the database (less secure), upload it here:</h2>
       <%= form_tag '/csv2', multipart: true do %>
-      <p><%= file_field_tag :file %><p>
+      <%= file_field_tag :file %>
       <%= submit_tag "Upload & Save CSV file", :id => 'upload' %>
       <% end %>
     </div>
