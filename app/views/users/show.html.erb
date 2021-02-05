@@ -6,24 +6,57 @@
   </head>
   <body class="dashboard">
     <br><br>
-    <div class=".file-no-save">
+    <div class="file-no-save">
       <h2 style="text-align:center;">To upload a CSV file without saving it, upload it here:</h2>
       <%= form_tag '/csv', multipart: true do %>
       <%= file_field_tag :file %>
       <%= submit_tag "Upload CSV file", :id => 'upload' %>
       <% end %>
       <br><br>
-      <h4 style="text-align:center;">After you upload, you can do things like caluclate the average cost per item, if your CSV has items and a cost associated with each item.</h4>
+      <h3 style="text-align:center;">After you upload, you can do things like caluclate the average cost per item, if your CSV has items and a cost associated with each item.</h3>
     </div>
-    <br><br>
-    <div class=".file-save">
+
+    <!-- Start of CSV/DATA table -->
+    <%if @file_data%>
+      <!-- Headers start here -->
+      <div class="headers">
+        <%@headers.each do |col| %>
+          <p><%=col%><p>
+        <%end%>
+      </div>
+      <!-- Headers end here -->
+      <!-- Body of table starts here -->
+      <div class="table_body">
+          <%@file_data[:customers].each_with_index do |row, index| %>
+            <% if index.odd? %>
+                <div class="row" style="background-color:rgb(201, 198, 198)">
+                <%row.each do |attr| %>
+                  <p style="float:left;margin-left:6px;"><%=attr%>  </p>
+                <%end%>
+                <div style="clear:both;"></div>
+              </div>
+            <% else %>
+              <div class="row" style="background-color:rgb(193, 160, 64)">
+              <%row.each do |attr| %>
+                <p style="float:left;margin-left:6px;"><%=attr%>  </p>
+              <%end%>
+              <div style="clear:both;"></div>
+            </div>
+            <% end %>
+          <%end%>
+      </div>
+      <!--  Body of table ends here -->
+
+    <%end%>
+    <!-- End of CSV/DATA table -->
+
+    
+    <div class="file-save">
       <h2 style="text-align:center;">To upload a CSV file AND save it to the database (less secure), upload it here:</h2>
       <%= form_tag '/csv2', multipart: true do %>
       <%= file_field_tag :file %>
-      <%= submit_tag "Upload CSV file", :id => 'upload' %>
+      <%= submit_tag "Upload & Save CSV file", :id => 'upload' %>
       <% end %>
     </div>
-
-
   </body>
 </html>
