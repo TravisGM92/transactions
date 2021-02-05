@@ -3,10 +3,14 @@ body.dashboard input[type=file] {
   background-color: rgb(175, 175, 175);
   border: solid black 2px;
   width: 400px;
-  height: 180px;
+  height: 170px;
   font-size: 30px;
   border-radius: 6px;
   margin-left: 100px;
+}
+
+body.dashboard input[type=file] p {
+  
 }
 
 #upload {

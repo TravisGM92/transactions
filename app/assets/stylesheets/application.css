@@ -18,9 +18,9 @@
    float: left;
    background-color: rgb(97, 162, 41);
    width: 300px;
-   height: 150px;
+   height: 140px;
    font-size: 50px;
-   margin-left: 220px;
+   margin-left: 190px;
    margin-top: 20px;
    border-radius: 6px;
  }
@@ -28,8 +28,8 @@
  .dash2 input[type=submit] {
    float: left;
    background-color: rgb(97, 162, 41);
-   width: 310px;
-   height: 150px;
+   width: 320px;
+   height: 140px;
    font-size: 50px;
    margin-left: 100px;
    margin-top: 20px;
