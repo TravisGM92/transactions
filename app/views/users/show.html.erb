@@ -31,14 +31,22 @@
             <% if index.odd? %>
                 <div class="row" style="background-color:rgb(201, 198, 198)">
                 <%row.each do |attr| %>
-                  <p style="float:left;margin-left:6px;"><%=attr%>  </p>
+                  <% if attr.include?('www') || attr.include?('http') || attr.include?('https') %>
+                    <a href="<%=attr%>"><p style="float:left;margin-left:6px;"><%=attr%></p></a>
+                  <%else%>
+                    <p style="float:left;margin-left:6px;"><%=attr%></p>
+                  <%end%>
                 <%end%>
                 <div style="clear:both;"></div>
               </div>
             <% else %>
               <div class="row" style="background-color:rgb(193, 160, 64)">
               <%row.each do |attr| %>
-                <p style="float:left;margin-left:6px;"><%=attr%>  </p>
+                <% if attr.include?('www') || attr.include?('http') || attr.include?('https') %>
+                  <a href="<%=attr%>"><p style="float:left;margin-left:6px;"><%=attr%></p></a>
+                <%else%>
+                  <p style="float:left;margin-left:6px;"><%=attr%></p>
+                <%end%>
               <%end%>
               <div style="clear:both;"></div>
             </div>
@@ -50,7 +58,7 @@
     <%end%>
     <!-- End of CSV/DATA table -->
 
-    
+
     <div class="file-save">
       <h2 style="text-align:center;">To upload a CSV file AND save it to the database (less secure), upload it here:</h2>
       <%= form_tag '/csv2', multipart: true do %>
