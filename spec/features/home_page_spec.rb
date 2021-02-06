@@ -49,10 +49,9 @@ RSpec.describe 'Login/logout' do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     visit('/')
     expect(page).to have_button('Logout')
-    expect(page).to have_button('Home')
+    expect(page).to have_button('Dashboard')
     visit('/dashboard')
     expect(page).to have_button('Logout')
-    expect(page).to have_button('Home')
     expect(page).to have_button('Dashboard')
   end
 end
