@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   end
 
   def create_file
-    @data = FileToData.convert(params)
+    FileToData.convert(params)
   end
 
   private

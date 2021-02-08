@@ -29,25 +29,30 @@ body.dashboard h3 {
 
 .headers p {
   float: left;
-  margin-left: 20px;
+  margin-left: 15px;
   font-size: 20px;
   font-weight: bold;
 }
 
 
 .table_body p:hover {
-  background-color: white;
   font-weight: bolder;
-  font-size: 20px;
 }
 
 .table_body {
   border: solid 1px;
   border-radius: 1px;
   height: 400px;
-  width: 99.8%;
+  width: 1350px;
   overflow-y: auto;
   overflow-x: auto;
   margin-bottom: 100px;
   position: relative;
+
+}
+
+.headers {
+  width: 1300px;
+  overflow-x: scroll;
+  white-space: nowrap;
 }

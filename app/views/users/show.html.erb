@@ -19,22 +19,25 @@
     <!-- Start of CSV/DATA table -->
     <%if @file_data%>
       <!-- Headers start here -->
+
       <div class="headers">
         <%@headers.each do |col| %>
-          <p><%=col%><p>
-        <%end%>
-      </div>
+        <p><%=col%><p>
+          <%end%>
+        </div>
+
       <!-- Headers end here -->
       <!-- Body of table starts here -->
       <div class="table_body">
+        <div style="clear:both;"></div>
           <%@file_data[:customers].each_with_index do |row, index| %>
             <% if index.odd? %>
                 <div class="row" style="background-color:rgb(201, 198, 198)">
                 <%row.each do |attr| %>
                   <% if attr.include?('www') || attr.include?('http') || attr.include?('https') %>
-                    <a href="<%=attr%>"><p style="float:left;margin-left:6px;"><%=attr%></p></a>
+                    <a href="<%=attr%>"><p style="float:left;margin-left:10px;"><%=attr%></p></a>
                   <%else%>
-                    <p style="float:left;margin-left:6px;"><%=attr%></p>
+                    <p style="float:left;margin-left:10px;"><%=attr%></p>
                   <%end%>
                 <%end%>
                 <div style="clear:both;"></div>
@@ -43,9 +46,9 @@
               <div class="row" style="background-color:rgb(193, 160, 64)">
               <%row.each do |attr| %>
                 <% if attr.include?('www') || attr.include?('http') || attr.include?('https') %>
-                  <a href="<%=attr%>"><p style="float:left;margin-left:6px;"><%=attr%></p></a>
+                  <a href="<%=attr%>"><p style="float:left;margin-left:10px;"><%=attr%></p></a>
                 <%else%>
-                  <p style="float:left;margin-left:6px;"><%=attr%></p>
+                  <p style="float:left;margin-left:10px;"><%=attr%></p>
                 <%end%>
               <%end%>
               <div style="clear:both;"></div>
